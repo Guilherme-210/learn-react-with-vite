@@ -7,10 +7,10 @@ export default function Header() {
     <>
       <header>
         <div className="div-logo">
-          <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
+          <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
             <img src={viteLogo} className="logo" alt="Vite logo" />
           </a>
-          <a href="https://reactjs.org" target="_blank" rel="noreferrer">
+          <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
             <img src={reactLogo} className="logo react" alt="React logo" />
           </a>
         </div>
@@ -19,13 +19,13 @@ export default function Header() {
 
         <div className="nav">
           <nav>
-            <a className="nav_pages" href="/">
+            <a className="nav_pages" href="/" rel="noopener noreferrer">
               <i className="fi fi-rr-angle-left"></i>
             </a>
-            <a className="nav_pages" href="/">
+            <a className="nav_pages" href="/" rel="noopener noreferrer">
               <ion-icon name="home"></ion-icon>
             </a>
-            <a className="nav_pages" href="/">
+            <a className="nav_pages" href="/" rel="noopener noreferrer">
               <i className="fi fi-rr-angle-right"></i>
             </a>
           </nav>
