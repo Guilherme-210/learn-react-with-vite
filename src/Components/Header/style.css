@@ -1,0 +1,67 @@
+/* estilização do header */
+header {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aqua;
+}
+
+/* estilizando a div-logo */
+.logo {
+  height: 2.5em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .div-logo .react {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  color: #faebd7;
+}
+
+/* estilização do header - nav */
+.nav_pages {
+  margin: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1em;
+
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  color: #d1f8ef;
+
+  background-color: #3674b5;
+  border: solid 0.5px #3674b5;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.nav_pages:hover {
+  transition-property: background-color, font-size, transform, color;
+  transition: 0.5s ease-in-out;
+
+  color: #3674b5;
+  border: solid 0.5px #3674b5;
+  background-color: #a1e3f9;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.671);
+}

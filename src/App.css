@@ -1,14 +1,17 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0;
   text-align: center;
 }
 
-.card {
-  padding: 2em;
-}
+/* estilização da main */
+main {
+  padding: 2rem;
 
-.read-the-docs {
-  color: #888;
+  background-color: #888;
+
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  width: 100%;
 }

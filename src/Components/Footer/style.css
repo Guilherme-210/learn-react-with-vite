@@ -1,0 +1,17 @@
+/* estilização do footer */
+footer {
+  color: #212529;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+footer p,
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
