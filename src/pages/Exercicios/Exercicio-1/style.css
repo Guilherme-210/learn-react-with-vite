@@ -1,0 +1,33 @@
+main {
+  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  max-width: 100%;
+  text-align: center;
+}
+
+h2 {
+  color: #fff;
+}
+
+p {
+  color: #fff;
+}
+
+.DivButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+hr {
+  width: 100%;
+}
+
+ul {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

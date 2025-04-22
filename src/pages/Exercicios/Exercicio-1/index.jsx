@@ -2,12 +2,19 @@ import "./style.css"
 import Button from "./components/Button.jsx"
 
 export default function ExplanatoryPage() {
+  const valTitle = [
+    "React",
+    "Crie interfaces de usuário de componentes",
+    "Escreva componentes com código e marcação",
+    "Próximos passos",
+  ]
+
   return (
     <>
       <main>
         <section>
-          <img src="/public/react.png" alt="" />
-          <h2>React</h2>
+          <img src="/public/react.png" alt="Imagem do o logo react" />
+          <h2>{valTitle[0]}</h2>
           <p>A biblioteca para interfaces de usuário web e nativas.</p>
           <div className="DivButtons">
             <Button
@@ -24,7 +31,7 @@ export default function ExplanatoryPage() {
         </section>
         <hr />
         <section>
-          <h2>Crie interfaces de usuário de componentes</h2>
+          <h2>{valTitle[1]}</h2>
           <p>
             React permite que você construa interfaces de usuário a partir de
             pedaços individuais chamados componentes.
@@ -32,7 +39,7 @@ export default function ExplanatoryPage() {
         </section>
         <hr />
         <section>
-          <h2>Escreva componentes com código e marcação</h2>
+          <h2>{valTitle[2]}</h2>
           <p>
             Componentes React são funções JavaScript. A sintaxe de marcação é
             chamada de JSX. É uma extensão da sintaxe JavaScript popularizada
@@ -41,7 +48,7 @@ export default function ExplanatoryPage() {
         </section>
         <hr />
         <section>
-          <h2>Próximos passos</h2>
+          <h2>{valTitle[3]}</h2>
           <ul>
             <li>
               <input type="checkbox" />

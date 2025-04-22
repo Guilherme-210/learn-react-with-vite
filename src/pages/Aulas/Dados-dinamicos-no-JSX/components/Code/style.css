@@ -1,0 +1,65 @@
+/* Contêiner do bloco de código */
+.code_container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabeçalho */
+.code_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.301);
+  padding: 10px 15px;
+}
+
+/* Título */
+.code_title {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Botões */
+.code_actions button {
+  background: none;
+  border: transparent solid 1px;
+  color: #bebebe;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.code_actions button:hover {
+  color: #fff;
+}
+
+/* Bloco de código */
+.code_block {
+  background-color: #171a1d;
+  color: #0f0;
+  padding: 15px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  white-space: pre-wrap;
+  border-radius: 0 0 8px 8px;
+  text-align: start;
+}
+/* estilização do fieldset - pre & code */
+/* pre, */
+code {
+  font-family: "Fira Code", monospace;
+  color: #4caf50;
+  border-radius: 5px;
+  background-color: #171a1d;
+  padding: 0.2rem;
+  white-space: pre-wrap;
+  font-size: 1rem;
+  line-height: 1.6;  
+
+}
+.code pre,
+pre code {
+  padding: 0;
+}
