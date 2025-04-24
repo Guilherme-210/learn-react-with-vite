@@ -23,6 +23,7 @@ export default function MainPage() {
               TitleFilme={filme.title}
               DescriptionFilme={filme.description}
               Alt={filme.Alt}
+              index={index}
             />
           ))}
         </section>

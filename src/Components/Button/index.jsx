@@ -1,7 +1,9 @@
-export default function Button({ Content, Id, Href }) {
+export default function Button({ Content, Id, Href, Title }) {
   return (
-    <a href={Href} target="blank" rel="noopener noreferrer">
-      <button id={Id}>{Content}</button>
+    <a href={Href} target="_blank" rel="noopener noreferrer">
+      <button title={Title} id={Id}>
+        {Content}
+      </button>
     </a>
   )
 }

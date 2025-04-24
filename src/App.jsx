@@ -10,8 +10,6 @@ export default function App() {
   return (
     <>
       <Header />
-      <Aula1 />
-      <Exercicio1 />
       <Exercicio2 />
       <Footer />
     </>
