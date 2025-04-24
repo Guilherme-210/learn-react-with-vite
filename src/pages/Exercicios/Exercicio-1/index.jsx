@@ -1,6 +1,5 @@
 import "./style.css"
-import Button from "./components/Button.jsx"
-
+import Button from "../../../Components/Button/index.jsx"
 export default function ExplanatoryPage() {
   const valTitle = [
     "React",

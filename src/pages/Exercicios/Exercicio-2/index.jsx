@@ -1,4 +1,4 @@
-import Card from "../../../Components/execicio2-card/Card.jsx"
+import Card from "../../../Components/execicio2-card/index.jsx"
 import StarWarsMovies from "../../../data/Exercicio2-ArrayStarWars/StarWarsMovies.js"
 import "./style.css"
 

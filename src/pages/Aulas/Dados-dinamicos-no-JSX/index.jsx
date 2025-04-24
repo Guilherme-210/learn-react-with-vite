@@ -1,5 +1,5 @@
-import Code from "./components/Code/Code.jsx"
-import Table from "./components/Table/Table.jsx"
+import Code from "../../../Components/Code/index.jsx"
+import Table from "../../../Components/Table/index.jsx"
 import "./style.css"
 
 export default function DadosDinamicos() {
