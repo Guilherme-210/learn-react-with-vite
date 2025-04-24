@@ -1,0 +1,99 @@
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-description {
+  gap: 2rem;
+  padding: 1.5rem;
+  border: 2px solid #444;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.section-description h2 {
+  font-size: 2rem;
+  color: #ffe81f;
+  margin-bottom: 1rem;
+}
+
+.section-description p {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilização dos cards */
+.section-cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+}
+
+.card-container {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+  border: 2px solid #444;
+  border-radius: 1rem;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.card-image {
+  max-width: 180px;
+}
+
+.card-image img {
+  width: 180px;
+  height: 270px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-content h2 {
+  font-size: 1.8rem;
+  color: #ffe81f; /* cor temática Star Wars */
+}
+
+.card-content p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.card-content button {
+  align-self: flex-start;
+  padding: 0.6rem 1.2rem;
+  background-color: #ffe81f;
+  color: #000;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+  transition: 1s;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.425);
+
+  background-color: #ffcc00;
+}
