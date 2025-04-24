@@ -5,7 +5,7 @@ export default function MainPage() {
     <>
       <main>
         <Portifolio
-          Avatar="/src/assets/avatar-pamcred/avatar-pamcred.jpg"
+          Avatar="../../../src/assets/avatar-pamcred/avatar-pamcred.jpg"
           AvatarAlt="Avatar da empresa Pamcred Soluções Financeiras"
           Name="Pamcred Soluções Financeiras"
           Bio="Minha bio de exemplo"
