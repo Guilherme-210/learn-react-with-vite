@@ -1,10 +1,10 @@
-import "../style.module.css"
+import styles from "../style.module.css"
 
 export default function InputName({ inputLabel, Obrigatory, InputId }) {
   const requiredMark = Obrigatory ? "*" : ""
 
   return (
-    <div className="InputSpan">
+    <div className={styles.InputSpan}>
       <span>
         <label htmlFor={InputId} className="LabelName">
           {inputLabel}

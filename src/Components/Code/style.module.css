@@ -48,7 +48,7 @@
 }
 /* estilização do fieldset - pre & code */
 /* pre, */
-code {
+.code_block code {
   font-family: "Fira Code", monospace;
   color: #4caf50;
   border-radius: 5px;

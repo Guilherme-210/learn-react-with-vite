@@ -1,4 +1,4 @@
-import "./style.css"
+import styles from "./style.module.css"
 
 export default function Code({ CodeContent, CodeRote }) {
   function handleCopy(text) {
@@ -15,19 +15,19 @@ ${text}`)
 
   return (
     <>
-      <div className="code_container">
-        <div className="code_header">
-          <span className="code_title">{CodeRote}</span>
-          <div className="code_actions">
+      <div className={styles.code_container}>
+        <div className={styles.code_header}>
+          <span className={styles.code_title}>{CodeRote}</span>
+          <div className={styles.code_actions}>
             <button
-              className="copy_btn"
+              className={styles.copy_btn}
               onClick={() => handleCopy(CodeContent)}
             >
               📋 Copiar
             </button>
           </div>
         </div>
-        <pre className="code_block">
+        <pre className={styles.code_block}>
           <code
             id="
 code_text"
