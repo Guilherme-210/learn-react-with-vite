@@ -1,7 +1,12 @@
-import Button from "../Button";
+import ButtonLink from "../ComponentsButtons/ButtonLink/index.jsx"
 
-
-export default function Card({ ImgFilme, TitleFilme, DescriptionFilme, Alt, index }) {
+export default function Card({
+  ImgFilme,
+  TitleFilme,
+  DescriptionFilme,
+  Alt,
+  index,
+}) {
   return (
     <div className="card-container">
       <div className="card-image">
@@ -10,17 +15,19 @@ export default function Card({ ImgFilme, TitleFilme, DescriptionFilme, Alt, inde
       <div className="card-content">
         <h2>{TitleFilme}</h2>
         <p>{DescriptionFilme}</p>
-        <Button
+        <ButtonLink
+          ClassName="card-button"
           Href="#"
           Content="Comprar agora"
           Id={index}
           Title="Não faz nada!"
         />
-        <Button
+        <ButtonLink
+          ClassName="card-button"
           Href="#"
           Content="Saiba mais Wikipedia"
           Id={index + 100}
-          // Title="Não faz nada!"
+          Title="Não faz nada!"
         />
       </div>
     </div>

@@ -1,0 +1,31 @@
+/* Estilo utilizado no exercicio 2 Star Wars Card */
+.card-button {
+  align-self: flex-start;
+  padding: 0.6rem 1.2rem;
+  background-color: #ffe81f;
+  color: #000;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.card-button:hover {
+  transition: 1s;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.425);
+
+  background-color: #ffcc00;
+}
+
+/* Estilo uzado no exercicio 3 Portifolio */
+.prifileButtons {
+  transition: background .8s ease-in-out;
+
+  border: 2px solid #3282b8;
+  background: linear-gradient(135deg, #1c3cce, #70b6ef);
+}
+.prifileButtons:hover {
+  background:  linear-gradient(135deg, #70b6ef, #1c3cce);
+  border: 2px solid #bbe1fa;
+  color: #f0f4f8;
+}

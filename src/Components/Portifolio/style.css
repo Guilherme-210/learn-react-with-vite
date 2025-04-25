@@ -51,15 +51,3 @@
   gap: 0.5rem;
   padding-bottom: 1rem;
 }
-
-.divButtons Button {
-  transition: background .8s ease-in-out;
-
-  border: 2px solid #3282b8;
-  background: linear-gradient(135deg, #1c3cce, #70b6ef);
-}
-.divButtons Button:hover {
-  background:  linear-gradient(135deg, #70b6ef, #1c3cce);
-  border: 2px solid #bbe1fa;
-  color: #f0f4f8;
-}

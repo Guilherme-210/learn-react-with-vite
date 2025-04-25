@@ -1,5 +1,5 @@
 import React from "react"
-import "./style.css" // Importe o arquivo CSS
+import style from "./style.module.css"
 
 function DataRow({ tipo, podeUsar }) {
   return (
@@ -26,10 +26,9 @@ function DataTable() {
   ]
 
   return (
-    <div className="fieldset_table">
-      <div className="div_table">
-        <table className="data-table">
-          {/* Aplique a classe 'data-table' */}
+    <div className={style.fieldsetTable}>
+      <div className={style.divTable}>
+        <table className={style.dataTable}>
           <thead>
             <tr>
               <th>Tipo de dado</th>

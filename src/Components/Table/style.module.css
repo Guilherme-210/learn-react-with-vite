@@ -1,18 +1,18 @@
 /* DataTable.css */
-.fieldset_table {
+.fieldsetTable {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.div_table {
+.divTable {
   width: fit-content;
   max-width: 100%;
   border-radius: 10px;
   margin: 1rem 0;
 }
 
-.data-table {
+.dataTable {
   /* Renomeei a classe 'table' para evitar conflitos */
   width: 100%;
   border-collapse: collapse;
@@ -24,23 +24,23 @@
   table-layout: auto;
 }
 
-.data-table thead {
+.dataTable thead {
   background-color: #212529; /* Cor de fundo do cabeçalho */
 }
 
-.data-table th,
-.data-table td {
+.dataTable th,
+.dataTable td {
   padding: 0.75rem 15px 0.25rem 10px; /* Ajustei o padding para remover o rgba na cor */
   text-align: left;
   border: 2px solid #1a1818bb; /* Cor da borda das células */
   color: #f1f5f9; /* Cor do texto das células */
 }
 
-.data-table th {
+.dataTable th {
   font-weight: bold;
   color: #f1f5f9; /* Cor do texto do cabeçalho */
 }
 
-.data-table tbody tr:nth-child(even) {
+.dataTable tbody tr:nth-child(even) {
   background-color: #2c3034;
 }

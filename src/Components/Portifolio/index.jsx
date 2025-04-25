@@ -1,4 +1,4 @@
-import Button from "../Button"
+import ButtonLink from "../ComponentsButtons/ButtonLink/index.jsx"
 import "./style.css"
 
 export default function Profile({
@@ -27,19 +27,22 @@ export default function Profile({
         </div>
 
         <div className="divButtons">
-          <Button
+          <ButtonLink
+            className="prifileButtons"
             Content="GitHub"
             Id={1}
             Href={GithubURL}
             Title="GitHub desse arquivo"
           />
-          <Button
+          <ButtonLink
+            className="prifileButtons"
             Content="Linkedin"
             Id={2}
             Href={LinkedinURL}
             Title="Linkedin do criador"
           />
-          <Button
+          <ButtonLink
+            className="prifileButtons"
             Content="Twitter"
             Id={3}
             Href={TwitterURL}

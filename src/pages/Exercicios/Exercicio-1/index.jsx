@@ -1,5 +1,5 @@
 import "./style.css"
-import Button from "../../../Components/Button/index.jsx"
+import Button from "../../../Components/ComponentsButtons/ButtonLink/index.jsx"
 
 export default function BibliotecaReact() {
   const valTitle = [

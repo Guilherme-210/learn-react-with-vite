@@ -3,6 +3,7 @@ import InputEmail from "../../../Components/FormComponents/InputEmail/index.jsx"
 import InputPassword from "../../../Components/FormComponents/InputSenhas/index.jsx"
 import ValidatePassword from "../../../Components/FormComponents/InputSenhas/ValidatePassword.jsx"
 import "./style.css"
+import Button from "../../../Components/ComponentsButtons/Button/index.jsx"
 
 export default function FormPage() {
   return (
@@ -17,7 +18,13 @@ export default function FormPage() {
             InputId="ValidatePassword"
             inputLabel="Validate Password"
           />
-          <button type="submit">Submit</button>
+          <Button
+            Title="submmit"
+            Id="submmit"
+            Content="submmit"
+            Type="submmit"
+            ClassName="LinkButton"
+          />
         </form>
       </main>
     </>

@@ -11,7 +11,11 @@ export default function App() {
   return (
     <>
       <Header />
-      <FormPage />
+      <DadosDinamicos />
+      {/* <BibliotecaReact /> */}
+      {/* <CardsStarWars /> */}
+      {/* <PortifolioPage /> */}
+      {/* <FormPage /> */}
       <Footer />
     </>
   )

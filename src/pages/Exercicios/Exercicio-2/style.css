@@ -78,22 +78,3 @@ main {
   line-height: 1.6;
   font-size: 1rem;
 }
-
-.card-content button {
-  align-self: flex-start;
-  padding: 0.6rem 1.2rem;
-  background-color: #ffe81f;
-  color: #000;
-  border: none;
-  border-radius: 0.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.card-content button:hover {
-  transition: 1s;
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.425);
-
-  background-color: #ffcc00;
-}
