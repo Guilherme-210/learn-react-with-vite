@@ -1,29 +1,23 @@
 import ButtonLink from "../ComponentsButtons/ButtonLink/index.jsx"
 import "./style.css"
 
-export default function Profile({
-  Avatar,
-  AvatarAlt,
-  Name,
-  Bio,
-  Phone,
-  Email,
-  GithubURL,
-  LinkedinURL,
-  TwitterURL,
-}) {
+export default function Profile({ Perfil }) {
   return (
     <>
       <div className="divProfile">
         <div className="image">
-          <img className="profileImage" src={Avatar} alt={AvatarAlt} />
-          <h2>{Name}</h2>
+          <img
+            className="profileImage"
+            src={Perfil.Avatar}
+            alt={Perfil.AvatarAlt}
+          />
+          <h2>{Perfil.Name}</h2>
         </div>
 
         <div className="DivContent">
-          <p>{Bio}</p>
-          <p>{Phone}</p>
-          <p>{Email}</p>
+          <p>{Perfil.Bio}</p>
+          <p>{Perfil.Email}</p>
+          <p>{Perfil.Phone}</p>
         </div>
 
         <div className="divButtons">
@@ -31,21 +25,21 @@ export default function Profile({
             className="prifileButtons"
             Content="GitHub"
             Id={1}
-            Href={GithubURL}
+            Href={Perfil.GithubURL}
             Title="GitHub desse arquivo"
           />
           <ButtonLink
             className="prifileButtons"
             Content="Linkedin"
             Id={2}
-            Href={LinkedinURL}
+            Href={Perfil.LinkedinURL}
             Title="Linkedin do criador"
           />
           <ButtonLink
             className="prifileButtons"
             Content="Twitter"
             Id={3}
-            Href={TwitterURL}
+            Href={Perfil.TwitterURL}
             Title="Twitter do criador"
           />
         </div>

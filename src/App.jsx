@@ -11,10 +11,10 @@ export default function App() {
   return (
     <>
       <Header />
-      <DadosDinamicos />
+      {/* <DadosDinamicos /> */}
       {/* <BibliotecaReact /> */}
       {/* <CardsStarWars /> */}
-      {/* <PortifolioPage /> */}
+      <PortifolioPage />
       {/* <FormPage /> */}
       <Footer />
     </>
