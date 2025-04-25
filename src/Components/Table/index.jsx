@@ -5,7 +5,9 @@ function DataRow({ tipo, podeUsar }) {
   return (
     <tr>
       <td>{tipo}</td>
-      <td>{podeUsar ? "✅ Sim" : "❌ Não"}</td>
+      <td style={{ color: podeUsar ? "green" : "red" }}>
+        {podeUsar ? "✅ Sim" : "❌ Não"}
+      </td>
     </tr>
   )
 }
