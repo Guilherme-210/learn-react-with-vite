@@ -1,21 +1,24 @@
-import "../style.css"
+import "../style.module.css"
 
-export default function InputName({ InputText, Obrigatory, PlaceHolder }) {
-  let ValObrigatory = "*"
-
-  if (!Obrigatory) {
-    ValObrigatory = ""
-  }
+export default function InputName({ inputLabel, Obrigatory, InputId }) {
+  const requiredMark = Obrigatory ? "*" : ""
 
   return (
-    <>
+    <div className="InputSpan">
       <span>
-        <label htmlFor="">
-          {InputText}
-          <span>{ValObrigatory}</span>
+        <label htmlFor={InputId} className="LabelName">
+          {inputLabel}
+          <span>{requiredMark}</span>
         </label>
       </span>
-      <input type="text" placeholder={PlaceHolder + ValObrigatory} />
-    </>
+      <input
+        required
+        type="text"
+        className="InputName"
+        name=""
+        id={InputId}
+        placeholder={`Enter your ${inputLabel}${requiredMark}`}
+      />
+    </div>
   )
 }

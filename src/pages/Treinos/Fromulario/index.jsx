@@ -1,25 +1,23 @@
 import InputName from "../../../Components/FormComponents/InputName/index.jsx"
 import InputEmail from "../../../Components/FormComponents/InputEmail/index.jsx"
+import InputPassword from "../../../Components/FormComponents/InputSenhas/index.jsx"
+import ValidatePassword from "../../../Components/FormComponents/InputSenhas/ValidatePassword.jsx"
 import "./style.css"
 
 export default function FormPage() {
   return (
     <>
       <main>
-        <h1>Formulario Mokado no React</h1>
+        <h1>Mokado Form in React</h1>
         <form className="Form">
-          <InputName
-            InputId="name"
-            InputText="Name"
-            Obrigatory="true"
-            PlaceHolder="Digite o seu nome"
+          <InputName InputId="name" inputLabel="Name" Obrigatory="true" />
+          <InputEmail InputId="email" inputLabel="Email" Obrigatory={true} />
+          <InputPassword InputId="Password" inputLabel="Password" />
+          <ValidatePassword
+            InputId="ValidatePassword"
+            inputLabel="Validate Password"
           />
-          <InputEmail
-            InputId="email"
-            InputText="Email"
-            Obrigatory={true}
-            PlaceHolder="Digite o seu e-mail"
-          />
+          <button type="submit">Submit</button>
         </form>
       </main>
     </>
