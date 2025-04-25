@@ -1,6 +1,6 @@
 import Portifolio from "../../../Components/Portifolio/index.jsx"
 
-export default function MainPage() {
+export default function PortifolioPage() {
   return (
     <>
       <main>

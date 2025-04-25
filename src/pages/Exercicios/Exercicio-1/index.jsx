@@ -1,6 +1,7 @@
 import "./style.css"
 import Button from "../../../Components/Button/index.jsx"
-export default function ExplanatoryPage() {
+
+export default function BibliotecaReact() {
   const valTitle = [
     "React",
     "Crie interfaces de usuário de componentes",

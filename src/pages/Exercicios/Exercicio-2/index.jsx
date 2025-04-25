@@ -2,7 +2,7 @@ import Card from "../../../Components/execicio2-card/index.jsx"
 import StarWarsMovies from "../../../data/Exercicio2-ArrayStarWars/StarWarsMovies.js"
 import "./style.css"
 
-export default function MainPage() {
+export default function CardsStarWars() {
   return (
     <>
       <main>
