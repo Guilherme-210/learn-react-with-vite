@@ -10,12 +10,23 @@ import FormPage from "./pages/Treinos/Fromulario/index.jsx"
 export default function App() {
   return (
     <>
-      <Header />
-      {/* <DadosDinamicos /> */}
-      {/* <BibliotecaReact /> */}
-      {/* <CardsStarWars /> */}
+      {/* <Header /> */}
+
+      {/* <Header currentPage="Dados Dinâmicos" />
+      <DadosDinamicos /> */}
+
+      {/* <Header currentPage="Biblioteca React" />
+      <BibliotecaReact /> */}
+
+      {/* <Header currentPage="Cards Star Wars" />
+      <CardsStarWars /> */}
+
+      <Header currentPage="Portfólio" />
       <PortifolioPage />
-      {/* <FormPage /> */}
+
+      {/* <Header currentPage="Formulário" />
+      <FormPage /> */}
+
       <Footer />
     </>
   )

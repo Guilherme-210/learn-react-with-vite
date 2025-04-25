@@ -2,20 +2,28 @@ import reactLogo from "../../assets/react.svg"
 import viteLogo from "/vite.svg"
 import "./style.css"
 
-export default function Header() {
+export default function Header({ currentPage }) {
   return (
     <>
       <header>
         <div className="div-logo">
-          <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://vitejs.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={viteLogo} className="logo" alt="Vite logo" />
           </a>
-          <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={reactLogo} className="logo react" alt="React logo" />
           </a>
         </div>
 
-        <h1>Vite + React</h1>
+        <h1>Vite + React {currentPage}</h1>
 
         <div className="nav">
           <nav>
