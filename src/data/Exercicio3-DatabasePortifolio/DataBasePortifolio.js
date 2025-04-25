@@ -1,6 +1,15 @@
+import GuilhermeAvatar from "../../assets/Portifolio/avatar-guilherme.png"
+import CamilaAvatar from "../../assets/Portifolio/avatar-camila.png"
+import JessicaAvatar from "../../assets/Portifolio/avatar-jessica.png"
+import LeonardoAvatar from "../../assets/Portifolio/avatar-leonardo.jpeg"
+import MarinaAvatar from "../../assets/Portifolio/avatar-marina.png"
+import BrunoAvatar from "../../assets/Portifolio/avatar-bruno.png"
+import AmandaAvatar from "../../assets/Portifolio/avatar-amanda.png"
+import DouglasAvatar from "../../assets/Portifolio/avatar-douglas.png"
+
 export const Perfils = [
   {
-    Avatar: "../../../src/assets/Portifolio/avatar-guilherme.png",
+    Avatar: GuilhermeAvatar,
     AvatarAlt: "Avatar da empresa Pamcred Soluções Financeiras",
     Name: "Guilherme Reis",
     Bio: "Minha bio de exemplo",
@@ -11,7 +20,7 @@ export const Perfils = [
     TwitterURL: "#",
   },
   {
-    Avatar: "../../../src/assets/Portifolio/avatar-camila.png",
+    Avatar: CamilaAvatar,
     AvatarAlt: "Avatar da desenvolvedora Camila Ribeiro",
     Name: "Camila Ribeiro",
     Bio: "Dev front-end com paixão por performance e boas práticas.",
@@ -22,7 +31,7 @@ export const Perfils = [
     TwitterURL: "https://twitter.com/camila_frontdev",
   },
   {
-    Avatar: "../../../src/assets/Portifolio/avatar-jessica.png",
+    Avatar: JessicaAvatar,
     AvatarAlt: "Avatar da desenvolvedora Jessica Antunes",
     Name: "Jessica Antunes",
     Bio: "Front-end dev apaixonada por acessibilidade e UI criativa.",
@@ -33,7 +42,7 @@ export const Perfils = [
     TwitterURL: "#",
   },
   {
-    Avatar: "../../../src/assets/Portifolio/avatar-leonardo.jpeg",
+    Avatar: LeonardoAvatar,
     AvatarAlt: "Avatar do programador Leonardo Silva",
     Name: "Leonardo Silva",
     Bio: "Especialista em React e TypeScript, com um pézinho no back-end.",
@@ -44,7 +53,7 @@ export const Perfils = [
     TwitterURL: "#",
   },
   {
-    Avatar: "../../../src/assets/Portifolio/avatar-marina.png",
+    Avatar: MarinaAvatar,
     AvatarAlt: "Avatar da designer Marina Costa",
     Name: "Marina Costa",
     Bio: "Designer que virou dev. HTML e CSS são meu playground.",
@@ -55,7 +64,7 @@ export const Perfils = [
     TwitterURL: "#",
   },
   {
-    Avatar: "../../../src/assets/Portifolio/avatar-bruno.png",
+    Avatar: BrunoAvatar,
     AvatarAlt: "Avatar do desenvolvedor Bruno Oliveira",
     Name: "Bruno Oliveira",
     Bio: "Curioso por natureza, desenvolvedor por paixão.",
@@ -66,7 +75,7 @@ export const Perfils = [
     TwitterURL: "#",
   },
   {
-    Avatar: "../../../src/assets/Portifolio/avatar-amanda.png",
+    Avatar: AmandaAvatar,
     AvatarAlt: "Avatar da desenvolvedora Amanda Amaral",
     Name: "Amanda Amaral",
     Bio: "Trabalho com Vue, mas tenho um crush secreto em React.",
@@ -77,7 +86,7 @@ export const Perfils = [
     TwitterURL: "#",
   },
   {
-    Avatar: "../../../src/assets/Portifolio/avatar-douglas.png",
+    Avatar: DouglasAvatar,
     AvatarAlt: "Avatar do fullstack Douglas Lima",
     Name: "Douglas Lima",
     Bio: "Fullstack focado em entregar soluções com qualidade.",
