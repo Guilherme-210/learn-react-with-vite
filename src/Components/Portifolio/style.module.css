@@ -1,0 +1,12 @@
+.divProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  border-radius: 5%;
+
+  background-color: #112d4e;
+
+  border: 2px solid #3f72af;
+}

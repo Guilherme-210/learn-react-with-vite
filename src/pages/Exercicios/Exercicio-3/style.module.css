@@ -1,0 +1,27 @@
+.Div {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+@media (max-width: 1250px) {
+  .Div {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .Div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .Div {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
