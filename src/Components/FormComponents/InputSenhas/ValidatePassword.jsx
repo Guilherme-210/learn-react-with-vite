@@ -12,8 +12,8 @@ export default function ValidatePassword({ inputLabel, InputId }) {
       <input
         required
         type="password"
-        className="InputSenha"
-        name=""
+        className="ValidatePassword"
+        name="ValidatePassword"
         id={InputId}
         placeholder={`Confirm your password*`}
         aria-label="Confirm your password"

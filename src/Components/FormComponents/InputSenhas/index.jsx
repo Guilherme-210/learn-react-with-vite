@@ -12,8 +12,8 @@ export default function InputPassword({ inputLabel, InputId }) {
       <input
         required
         type="password"
-        className="InputSenha"
-        name=""
+        className="InputPassword"
+        name="InputPassword"
         id={InputId}
         placeholder={`Enter your password*`}
         aria-label="Enter your password"

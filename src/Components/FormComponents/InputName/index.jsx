@@ -1,6 +1,6 @@
 import styles from "../style.module.css"
 
-export default function InputName({ inputLabel, Obrigatory, InputId }) {
+export default function InputName({ inputLabel, Obrigatory = { Boolean }, InputId }) {
   const requiredMark = Obrigatory ? "*" : ""
 
   return (
@@ -12,11 +12,13 @@ export default function InputName({ inputLabel, Obrigatory, InputId }) {
         </label>
       </span>
       <input
-        required
+        // required
+        required={Obrigatory}
         type="text"
         className="InputName"
-        name=""
+        name="InputName"
         id={InputId}
+        autocomplete="given-name"
         placeholder={`Enter your ${inputLabel}${requiredMark}`}
       />
     </div>

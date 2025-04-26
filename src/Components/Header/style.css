@@ -65,3 +65,20 @@ h1 {
   background-color: #a1e3f9;
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.671);
 }
+
+
+@media (max-width: 1250px) {
+  h1 {
+    font-size: small;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: small;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: large;
+  }
+}
