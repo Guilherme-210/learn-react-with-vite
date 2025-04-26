@@ -9,8 +9,8 @@ export default function PortifolioPage() {
         <div
           className={styles.Div}
         >
-          {Perfils.map((Perfil) => (
-            <Portifolio Perfil={Perfil} />
+          {Perfils.map((Perfil, index) => (
+            <Portifolio Perfil={Perfil} key={index} />
           ))}
         </div>
       </main>

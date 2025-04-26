@@ -1,25 +1,40 @@
-/* estilização do header */
-header {
+/* --- Estilização do .Header --- */
+.Header {
   max-width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #1c3cce, #70b6ef);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: aqua;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 4px 8px rgba(28, 60, 206, 0.4);
+  border-bottom: 3px solid #ffffff30;
+  flex-wrap: wrap;
 }
 
-/* estilizando a div-logo */
+/* --- Div de Logos --- */
+.div-logo {
+  display: flex;
+  gap: 1rem;
+}
+
 .logo {
-  height: 2.5em;
-  padding: 1.5em;
+  height: 3rem;
+  padding: 0.5rem;
   will-change: filter;
-  transition: filter 300ms;
+  transition: transform 0.4s, filter 0.4s;
+  border-radius: 50%;
+  background: #ffffff15;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 1rem #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 1rem #61dafbaa);
 }
+
+/* --- Animação do React Logo --- */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -34,51 +49,85 @@ header {
   }
 }
 
-h1 {
-  font-size: 2.5em;
-  line-height: 1.1;
-  color: #faebd7;
+/* --- Título --- */
+.titlePage {
+  flex: 1;
+  text-align: center;
+  font-size: 2rem;
+  color: #f9f9f9;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* estilização do header - nav */
+/* --- Navegação --- */
+.nav {
+  display: flex;
+}
+
 .nav_pages {
-  margin: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  font-size: 1em;
-
-  text-decoration: none;
-  text-align: center;
+  margin: 0 0.3rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #d1f8ef;
-
-  background-color: #3674b5;
-  border: solid 0.5px #3674b5;
-  cursor: pointer;
+  color: #ffffff;
+  background: #3674b5;
+  border: 2px solid transparent;
   border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 .nav_pages:hover {
-  transition-property: background-color, font-size, transform, color;
-  transition: 0.5s ease-in-out;
-
+  background: #a1e3f9;
   color: #3674b5;
-  border: solid 0.5px #3674b5;
-  background-color: #a1e3f9;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.671);
+  border: 2px solid #3674b5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
 }
 
-
-@media (max-width: 1250px) {
-  h1 {
-    font-size: small;
-  }
-}
+/* --- Responsivo --- */
 @media (max-width: 768px) {
-  h1 {
-    font-size: small;
+  .Header {
+    display: grid;
+    justify-content: space-around;
+
+    grid-template-areas:
+      "logo  nav"
+      "title title";
+  }
+
+  .div-logo {
+    grid-area: logo;
+  }
+  .logo {
+    height: 2rem;
+  }
+
+  .titlePage {
+    grid-area: title;
+    font-size: 1.5rem;
+  }
+
+  .nav  {
+    grid-area: nav;
   }
 }
+
 @media (max-width: 480px) {
-  h1 {
-    font-size: large;
+  .Header {
+    grid-template-areas:
+      "logo nav"
+      "title title";
+  }
+
+  .logo {
+    height: 1.5rem;
+  }
+
+  .titlePage {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    font-size: 1rem;
   }
 }
