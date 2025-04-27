@@ -1,5 +1,5 @@
 .footer {
-  width: 100%;
+  max-width: 100%;
   padding: 1.5rem 2rem;
   background: linear-gradient(135deg, #1e1e2f, #2e3a59);
   color: #dcdcdc;
@@ -99,5 +99,13 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .backToTop {
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.4rem 0.8rem;
   }
 }
