@@ -10,6 +10,17 @@
   box-shadow: 0 4px 8px rgba(28, 60, 206, 0.4);
   border-bottom: 3px solid #ffffff30;
   flex-wrap: wrap;
+  animation: slideDown 0.8s ease forwards;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* --- Div de Logos --- */

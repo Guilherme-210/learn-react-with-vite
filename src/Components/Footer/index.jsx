@@ -2,29 +2,37 @@ import styles from "./style.module.css"
 
 export default function Footer() {
   return (
-    <>
-      <footer className={styles.Footer}>
-        <p>© 2025 Desenvolvido por Guilherme Reis.</p>
-        <br />
-        <nav className={styles.NavFooter}>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <p className={styles.text}>
+          © {new Date().getFullYear()} Desenvolvido por
+          <span> Guilherme Reis</span>
+        </p>
+        <nav className={styles.nav}>
           <a
-            className={styles.LinkFooter}
+            className={styles.link}
             href="https://github.com/Guilherme-210"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Acesse o meu GitHub <ion-icon name="logo-github"></ion-icon>
+            GitHub <ion-icon name="logo-github"></ion-icon>
           </a>
           <a
-            className={styles.LinkFooter}
+            className={styles.link}
             href="https://github.com/Guilherme-210/learn-react-with-vite.git"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Acesse o diretorio
+            Diretório do Projeto
           </a>
         </nav>
-      </footer>
-    </>
+        <button
+          className={styles.backToTop}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          ↑
+        </button>
+      </div>
+    </footer>
   )
 }
