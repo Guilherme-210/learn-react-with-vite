@@ -1,0 +1,59 @@
+.Content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #2e64b69a;
+  color: #c9d1d9;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px #58a6ff;
+}
+
+.Title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.Form input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.Form input[type="text"]:focus {
+  border-color: #3b82f6; /* Azul clarinho no foco */
+  box-shadow: 0 0 5px #3b82f6;
+}
+
+.ButtonGenerate {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ButtonGenerate:hover {
+  background-color: #2563eb; /* Azul mais escuro no hover */
+}

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import styles from "./style.module.css"
+import styles from "../style.module.css"
 
 export default function ButtonFollow({
   Content,

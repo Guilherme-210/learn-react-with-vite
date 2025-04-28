@@ -1,6 +1,7 @@
 import PasswordGenerator from "../../../Components/ComponentsButtons/PasswordGenerator/index.jsx"
 import CopyButton from "../../../Components/ComponentsButtons/CopyButton/index.jsx"
 import { useState } from "react"
+import styles from "./style.module.css"
 
 export default function GeradorDeSenha() {
   const [copyText, setCopyText] = useState("Copiar")
@@ -60,10 +61,10 @@ export default function GeradorDeSenha() {
 
   return (
     <>
-      <main>
-        <h2>Gerador de senha</h2>
+      <main className={styles.Content}>
+        <h2 className={styles.Title}>Gerador de senha</h2>
 
-        <form>
+        <form className={styles.Form}>
           <input
             type="text"
             name="Input senha"
@@ -74,10 +75,14 @@ export default function GeradorDeSenha() {
           />
           <PasswordGenerator
             Content={passwordText}
-            ClassName=""
+            ClassName="ButtonGenerate"
             onClick={generatePassword}
           />
-          <CopyButton Content={copyText} ClassName="" onClick={copyPassword} />
+          <CopyButton
+            Content={copyText}
+            ClassName="ButtonGenerate"
+            onClick={copyPassword}
+          />
         </form>
       </main>
     </>

@@ -1,4 +1,4 @@
-import styles from "./style.module.css"
+import styles from "../style.module.css"
 
 export default function Button({ Content, Id, Title, Type, ClassName }) {
   const finalClassName = styles[ClassName]
