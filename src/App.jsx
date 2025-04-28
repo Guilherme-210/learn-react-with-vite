@@ -6,6 +6,7 @@ import ConhecendoHooks from "./pages/Aulas/Conhecendo-od-hooks/index.jsx"
 import BibliotecaReact from "./pages/Exercicios/Exercicio-1/index.jsx"
 import CardsStarWars from "./pages/Exercicios/Exercicio-2/index.jsx"
 import PortifolioPage from "./pages/Exercicios/Exercicio-3/index.jsx"
+import GeradorDeSenha from "./pages/Exercicios/Exercicio-4/index.jsx"
 import FormPage from "./pages/Treinos/Fromulario/index.jsx"
 
 export default function App() {
@@ -25,8 +26,11 @@ export default function App() {
       {/* <Header currentPage="Portfólio" />
       <PortifolioPage /> */}
 
+      {/* <Header currentPage="Conhecendo os Hooks" />
+      <ConhecendoHooks /> */}
+
       <Header currentPage="Conhecendo os Hooks" />
-      <ConhecendoHooks />
+      <GeradorDeSenha />
 
       {/* <Header currentPage="Formulário" />
       <FormPage /> */}
