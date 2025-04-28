@@ -1,15 +1,15 @@
 import styles from "./style.module.css"
 
-export default function PasswordGenerator({ Content, Id, Title, Type, ClassName, onClick }) {
+export default function PasswordGenerator({ Content, ClassName, onClick }) {
   const finalClassName = styles[ClassName]
 
   return (
     <>
       <button
         className={finalClassName}
-        title={Title}
-        id={Id}
-        type={Type}
+        title="Gerador de senha"
+        id="generatePassword"
+        type="button"
         onClick={onClick}
       >
         {Content}

@@ -26,9 +26,36 @@ export default function GeradorDeSenha() {
     }, 1000 * 3)
   }
 
-  function gerarSenha(ev) {
+  function generatePassword(ev, size = 12) {
     ev.preventDefault()
-    setPasswordText("Senha gerada")
+
+    const caracteres =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+=-`~[]{}|;':\",./<>?"
+    let result = ""
+
+    try {
+      if (size > 100) {
+        throw new Error("Senha muito longa! Escolha até 100 caracteres.")
+      }
+
+      for (let i = 0; i < size; i++) {
+        result += caracteres.charAt(
+          Math.floor(Math.random() * caracteres.length)
+        )
+      }
+      setPassword(result)
+
+      if (passwordText === "Gerar senha") {
+        setPasswordText("Senha gerada")
+      }
+
+      setTimeout(() => {
+        setPasswordText("Gerar senha")
+      }, 1000 * 5)
+      console.log("Senha gerada com sucesso!")
+    } catch (error) {
+      console.error(`Erro ao gerar a senha: ${error}`)
+    }
   }
 
   return (
@@ -39,27 +66,18 @@ export default function GeradorDeSenha() {
         <form>
           <input
             type="text"
-            name=""
-            id=""
+            name="Input senha"
+            id="InputSenha"
+            placeholder="Sua senha aparecerá aqui..."
             value={password}
             onChange={inputAction}
           />
           <PasswordGenerator
             Content={passwordText}
-            Id=""
-            Title="Gerador de senha"
-            Type=""
             ClassName=""
-            onClick={gerarSenha}
+            onClick={generatePassword}
           />
-          <CopyButton
-            Content={copyText}
-            Id=""
-            Title="Botão de cópia"
-            Type=""
-            ClassName=""
-            OnClick={copyPassword}
-          />
+          <CopyButton Content={copyText} ClassName="" onClick={copyPassword} />
         </form>
       </main>
     </>
