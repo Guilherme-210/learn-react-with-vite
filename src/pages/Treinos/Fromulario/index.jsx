@@ -11,7 +11,7 @@ export default function FormPage() {
   return (
     <>
       <main>
-        <h1>Mokado Form in React</h1>
+        <h2>Mokado Form in React</h2>
         <form className="Form">
           <InputName InputId="name" inputLabel="Name" Obrigatory={null} />
 

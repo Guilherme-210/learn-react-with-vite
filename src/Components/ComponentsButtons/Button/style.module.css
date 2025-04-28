@@ -2,11 +2,29 @@
 .LinkButton {
   transition: background .8s ease-in-out;
 
-  border: 2px solid #3282b8;
+  border: 1px solid #3282b8;
   background: linear-gradient(135deg, #1c3cce, #70b6ef);
 }
 .LinkButton:hover {
   background:  linear-gradient(135deg, #70b6ef, #1c3cce);
-  border: 2px solid #bbe1fa;
+  border: 1px solid #bbe1fa;
+  color: #f0f4f8;
+}
+
+/* Estilo uzado no exercicio 3 Portifolio */
+.followButton {
+  transition: background box-shadow 0.8s ease-in-out;
+
+  background: linear-gradient(135deg, #1c3cce, #70b6ef);
+  box-shadow: 4px 4px 8px rgb(28, 60, 206);
+
+  padding: 6px;
+}
+.followButton:hover {
+  transition: background box-shadow 0.8s ease-in-out;
+  
+  background: linear-gradient(135deg, #1c3cce, #70b6ef, #1c3cce);
+  box-shadow: 0px 4px 8px  rgb(112, 182, 239);
+ 
   color: #f0f4f8;
 }

@@ -21,11 +21,11 @@ export default function App() {
       {/* <Header currentPage="Cards Star Wars" />
       <CardsStarWars /> */}
 
-      {/* <Header currentPage="Portfólio" />
-      <PortifolioPage /> */}
+      <Header currentPage="Portfólio" />
+      <PortifolioPage />
 
-      <Header currentPage="Formulário" />
-      <FormPage />
+      {/* <Header currentPage="Formulário" />
+      <FormPage /> */}
 
       <Footer />
     </>

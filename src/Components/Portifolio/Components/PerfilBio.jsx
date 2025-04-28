@@ -1,3 +1,4 @@
+import Button from "../../ComponentsButtons/Button"
 import ButtonLink from "../../ComponentsButtons/ButtonLink"
 
 import styles from "./style.module.css"
@@ -10,9 +11,21 @@ export function PerfilImage({ Perfil }) {
         src={Perfil.Avatar}
         alt={Perfil.AvatarAlt}
       />
-      <h2>{Perfil.Name}</h2>
+      <Title>
+        {Perfil.Name}
+        <Button
+          Content="Seguir"
+          ClassName="followButton"
+          Title={`Seguir ${Perfil.Name}`}
+          Id={`followButton${Perfil.Name}`}
+        />
+      </Title>
     </div>
   )
+}
+
+export function Title({ children }) {
+  return <h2>{children}</h2>
 }
 
 export function PerfilBio({ Perfil }) {
