@@ -1,3 +1,46 @@
+/* Estilização code conteiner */
+.CodeDetails {
+  background-color: #47c7faa6;
+  border: 2px solid  #929090;
+  border-radius: 5px;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);;
+}
+.CodeDetails:hover {
+  background-color: #7ceff7ce;
+  border-color: #19bbd8e3;
+  box-shadow: #19bbd8e3;
+}
+.CodeDetails[open]:hover {
+  background-color: #47c7faa6;
+  border-color: #19bbd8e3;
+  box-shadow: 0 0 10px #578fcacc;
+}
+
+.CodeSummary {
+  color: var(--code-color);
+  margin: 0.5rem;
+}
+.CodeSummary::marker {
+  content: "📕 ";
+  float: left;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+  font-size: large;
+}
+.CodeDetails[open] .CodeSummary::marker {
+  content: "📖 ";
+}
+
+.div_details {
+  display: flex;
+  flex-direction: column;
+  gap: var(0.5rem);
+}
+
 /* Contêiner do bloco de código */
 .code_container {
   width: 100%;
