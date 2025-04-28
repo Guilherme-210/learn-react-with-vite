@@ -1,4 +1,4 @@
-import Button from "../../ComponentsButtons/Button"
+import ButtonFollow from "../../ComponentsButtons/ButtonFollow/index.jsx"
 import ButtonLink from "../../ComponentsButtons/ButtonLink"
 
 import styles from "./style.module.css"
@@ -13,7 +13,8 @@ export function PerfilImage({ Perfil }) {
       />
       <Title>
         {Perfil.Name}
-        <Button
+        <ButtonFollow
+          NameVal={Perfil.Name}
           Content="Seguir"
           ClassName="followButton"
           Title={`Seguir ${Perfil.Name}`}
@@ -40,7 +41,7 @@ export function PerfilBio({ Perfil }) {
 
 export function PerfilButtons({ Perfil }) {
   return (
-    <div className={styles.divButtons}>
+    <div className={styles.divButtons} aria-label="Links sociais">
       <ButtonLink
         ClassName="prifileButtons"
         Content="GitHub"
