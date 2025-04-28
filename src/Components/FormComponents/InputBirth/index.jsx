@@ -9,7 +9,7 @@ export default function InputBirth({
 
   return (
     <div className={styles.InputSpan}>
-      <label htmlFor={inputLabel}>
+      <label htmlFor={InputId}>
         {inputLabel}
         {requiredMark}
       </label>

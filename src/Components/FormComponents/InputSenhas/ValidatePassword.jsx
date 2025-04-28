@@ -1,6 +1,6 @@
 import styles from "../style.module.css"
 
-export default function ValidatePassword({ inputLabel, InputId }) {
+export default function ValidatePassword({ inputLabel, InputId, minLength }) {
   return (
     <div className={styles.InputSpan}>
       <span>
@@ -17,6 +17,9 @@ export default function ValidatePassword({ inputLabel, InputId }) {
         id={InputId}
         placeholder={`Confirm your password*`}
         aria-label="Confirm your password"
+        minLength={minLength}
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$"
+        title="Senha deve conter no mínimo 8 caracteres, incluindo uma letra maiúscula, uma minúscula e um número."
       />
     </div>
   )
