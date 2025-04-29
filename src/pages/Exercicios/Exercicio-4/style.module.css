@@ -24,7 +24,7 @@
   align-items: center;
   gap: 1rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
 }
 
 .Form input[type="text"] {
@@ -42,18 +42,12 @@
   box-shadow: 0 0 5px #3b82f6;
 }
 
-.ButtonGenerate {
+.divFlexRow {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+
   width: 100%;
-  padding: 0.75rem;
-  background-color: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.ButtonGenerate:hover {
-  background-color: #2563eb; /* Azul mais escuro no hover */
-}
+

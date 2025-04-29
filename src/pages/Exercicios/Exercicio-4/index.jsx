@@ -1,16 +1,33 @@
 import PasswordGenerator from "../../../Components/ComponentsButtons/PasswordGenerator/index.jsx"
 import CopyButton from "../../../Components/ComponentsButtons/CopyButton/index.jsx"
+import DeleteButton from "../../../Components/ComponentsButtons/DeleteButton/index.jsx"
 import { useState } from "react"
 import styles from "./style.module.css"
 
 export default function GeradorDeSenha() {
   const [copyText, setCopyText] = useState("Copiar")
   const [passwordText, setPasswordText] = useState("Gerar senha")
+  const [deleteText, setDeleteText] = useState("Deletar")
   const [password, setPassword] = useState("")
 
   function inputAction(ev) {
     setPassword(ev.target.value)
     setCopyText("Copiar")
+  }
+
+  function delPassword(ev) {
+    ev.preventDefault()
+    navigator.clipboard.writeText(password)
+
+    if (copyText === "Copiar") {
+      setDeleteText("Deletado")
+      setPassword("")
+      console.log("Senha apagada com sucesso!")
+    }
+
+    setTimeout(() => {
+      setDeleteText("Deletar")
+    }, 1000 * 2)
   }
 
   function copyPassword(ev) {
@@ -65,24 +82,34 @@ export default function GeradorDeSenha() {
         <h2 className={styles.Title}>Gerador de senha</h2>
 
         <form className={styles.Form}>
-          <input
-            type="text"
-            name="Input senha"
-            id="InputSenha"
-            placeholder="Sua senha aparecerá aqui..."
-            value={password}
-            onChange={inputAction}
-          />
-          <PasswordGenerator
-            Content={passwordText}
-            ClassName="ButtonGenerate"
-            onClick={generatePassword}
-          />
-          <CopyButton
-            Content={copyText}
-            ClassName="ButtonGenerate"
-            onClick={copyPassword}
-          />
+          <div className={styles.divFlexRow}>
+            <input
+              type="text"
+              name="Input senha"
+              id="InputSenha"
+              placeholder="Sua senha aparecerá aqui..."
+              value={password}
+              onChange={inputAction}
+              readOnly
+            />
+            <DeleteButton
+              Content={deleteText}
+              ClassName="deletButton"
+              onClick={delPassword}
+            />
+          </div>
+          <div className={styles.divFlexRow}>
+            <PasswordGenerator
+              Content={passwordText}
+              ClassName="ButtonGenerate"
+              onClick={generatePassword}
+            />
+            <CopyButton
+              Content={copyText}
+              ClassName="ButtonGenerate"
+              onClick={copyPassword}
+            />
+          </div>
         </form>
       </main>
     </>

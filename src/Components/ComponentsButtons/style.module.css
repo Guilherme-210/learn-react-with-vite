@@ -64,21 +64,37 @@
   color: #f0f4f8;
 }
 
-/*  */
+/* Estilo usado no gerador de senhas */
 .ButtonGenerate {
   width: 100%;
   padding: 0.75rem;
+  margin: 0;
   background-color: #3b82f6;
   color: white;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
+  border: 1px solid #3282b8;
   transition: background-color 0.3s;
 }
-
 .ButtonGenerate:hover {
   transition: background 1s;
   background-color: #0b4edf; /* Azul mais escuro no hover */
+  border: 1px solid #bbe1fa;
   color: white;
+}
+
+.deletButton {
+  transition: background .8s ease-in-out;
+
+  margin: 8px 0;
+  border: 1px solid #3282b8;
+  color: #f0f4f8;
+  background: #3b82f6;
+}
+.deletButton:hover {
+  background:  #0b4edf;
+  border: 1px solid #bbe1fa;
+  color: #f0f4f8;
 }
