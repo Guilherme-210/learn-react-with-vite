@@ -38,21 +38,6 @@ section {
   border-radius: 0.5rem;
 }
 
-button {
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #238636;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  color: white;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background-color: #2ea043;
-}
-
 @media (max-width: 1250px) {
   .container {
     max-width: 90%;

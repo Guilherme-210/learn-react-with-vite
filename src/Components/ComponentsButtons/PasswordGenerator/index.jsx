@@ -2,10 +2,10 @@
 import { useState } from "react"
 import styles from "../style.module.css"
 
-export default function PasswordGenerator({ setPassword }) {
+export default function PasswordGenerator({ setPassword, passwordSize }) {
   const [passwordText, setPasswordText] = useState("Gerar senha")
 
-  function generatePassword(ev, size = 12) {
+  function generatePassword(ev) {
     ev.preventDefault()
 
     const caracteres =
@@ -13,11 +13,11 @@ export default function PasswordGenerator({ setPassword }) {
     let result = ""
 
     try {
-      if (size > 100) {
+      if (passwordSize < 1 || passwordSize > 100) {
         throw new Error("Senha muito longa! Escolha até 100 caracteres.")
       }
 
-      for (let i = 0; i < size; i++) {
+      for (let i = 0; i < passwordSize; i++) {
         result += caracteres.charAt(
           Math.floor(Math.random() * caracteres.length)
         )
@@ -32,6 +32,7 @@ export default function PasswordGenerator({ setPassword }) {
       console.log("Senha gerada com sucesso!")
     } catch (error) {
       console.error(`Erro ao gerar a senha: ${error}`)
+      setPassword("Erro: " + error.message)
     }
   }
 

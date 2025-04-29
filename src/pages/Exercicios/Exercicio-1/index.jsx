@@ -18,11 +18,13 @@ export default function BibliotecaReact() {
           <p>A biblioteca para interfaces de usuário web e nativas.</p>
           <div className="DivButtons">
             <Button
+              ClassName="ButtonGenerate"
               Href="https://react.dev/learn"
               Id="IdReact"
               Content="Aprenda React"
             />
             <Button
+              ClassName="ButtonGenerate"
               Href="https://react.dev/reference/react"
               Id="IdAPI"
               Content="Referência da API"

@@ -1,6 +1,7 @@
 /* Estilo usado no treino formulario */
 .LinkButton {
   transition: background .8s ease-in-out;
+  border-radius: 0.5rem;
 
   border: 1px solid #3282b8;
   background: linear-gradient(135deg, #1c3cce, #70b6ef);
@@ -14,6 +15,7 @@
 /* Estilo uzado no exercicio 3 Portifolio */
 .followButton {
   transition: background box-shadow 0.8s ease-in-out;
+  border-radius: 0.5rem;
 
   background: linear-gradient(135deg, #1c3cce, #70b6ef);
   box-shadow: 4px 4px 8px rgb(28, 60, 206);
@@ -68,7 +70,6 @@
 .ButtonGenerate {
   width: 100%;
   padding: 0.75rem;
-  margin: 0;
   background-color: #3b82f6;
   color: white;
   border: none;
@@ -87,8 +88,10 @@
 
 .DeletButton {
   transition: background .8s ease-in-out;
-
-  margin: 8px 0;
+  border-radius: 0.5rem;
+  padding: 0 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
   border: 1px solid #3282b8;
   color: #f0f4f8;
   background: #3b82f6;

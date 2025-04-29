@@ -28,7 +28,7 @@
 }
 
 .Form input[type="text"] {
-  width: 100%;
+  width: 90%;
   padding: 0.75rem 1rem;
   font-size: 1rem;
   border: 2px solid #ccc;
@@ -36,8 +36,21 @@
   outline: none;
   transition: 0.3s;
 }
-
 .Form input[type="text"]:focus {
+  border-color: #3b82f6; /* Azul clarinho no foco */
+  box-shadow: 0 0 5px #3b82f6;
+}
+
+.Form input[type="number"] {
+  width: 70%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+.Form input[type="number"]:focus {
   border-color: #3b82f6; /* Azul clarinho no foco */
   box-shadow: 0 0 5px #3b82f6;
 }
@@ -45,9 +58,19 @@
 .divFlexRow {
   display: flex;
   flex-direction: row;
-  gap: .5rem;
+  gap: 0.5rem;
+
+  align-items: center;
 
   width: 100%;
 }
 
+.divFlexColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
+  align-items: start;
+
+  width: 100%;
+}
