@@ -85,7 +85,7 @@
   color: white;
 }
 
-.deletButton {
+.DeletButton {
   transition: background .8s ease-in-out;
 
   margin: 8px 0;
@@ -93,7 +93,7 @@
   color: #f0f4f8;
   background: #3b82f6;
 }
-.deletButton:hover {
+.DeletButton:hover {
   background:  #0b4edf;
   border: 1px solid #bbe1fa;
   color: #f0f4f8;
