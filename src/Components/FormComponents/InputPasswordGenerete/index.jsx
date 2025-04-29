@@ -1,10 +1,12 @@
 import DeleteButton from "../../ComponentsButtons/DeleteButton"
+import RestartButton from "../../ComponentsButtons/RestartButton/index.jsx"
 
 export default function InputPasswordGenerete({
   passwordSize,
   password,
   setPassword,
   styles,
+  setPasswordSize,
 }) {
   function inputAction(ev) {
     setPassword(ev.target.value)
@@ -26,6 +28,10 @@ export default function InputPasswordGenerete({
           readOnly
         />
         <DeleteButton setPassword={setPassword} />
+        <RestartButton
+          setPassword={setPassword}
+          setPasswordSize={setPasswordSize}
+        />
       </div>
     </div>
   )

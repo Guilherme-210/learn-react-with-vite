@@ -24,6 +24,7 @@ export default function GeradorDeSenha() {
           password={password}
           setPassword={setPassword}
           styles={styles}
+          setPasswordSize={setPasswordSize}
         />
         <div className={styles.divFlexRow}>
           <PasswordGenerator
