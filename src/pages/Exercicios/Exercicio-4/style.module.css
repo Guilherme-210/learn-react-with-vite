@@ -27,6 +27,7 @@
   max-width: 600px;
 }
 
+.Form input[type="number"],
 .Form input[type="text"] {
   width: 90%;
   padding: 0.75rem 1rem;
@@ -36,21 +37,8 @@
   outline: none;
   transition: 0.3s;
 }
+.Form input[type="number"]:focus,
 .Form input[type="text"]:focus {
-  border-color: #3b82f6; /* Azul clarinho no foco */
-  box-shadow: 0 0 5px #3b82f6;
-}
-
-.Form input[type="number"] {
-  width: 70%;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  transition: 0.3s;
-}
-.Form input[type="number"]:focus {
   border-color: #3b82f6; /* Azul clarinho no foco */
   box-shadow: 0 0 5px #3b82f6;
 }
@@ -61,6 +49,7 @@
   gap: 0.5rem;
 
   align-items: center;
+  text-align: center;
 
   width: 100%;
 }
