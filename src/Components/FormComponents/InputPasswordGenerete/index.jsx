@@ -7,6 +7,8 @@ export default function InputPasswordGenerete({
   setPassword,
   styles,
   setPasswordSize,
+  showInput,
+  setShowInput,
 }) {
   function inputAction(ev) {
     setPassword(ev.target.value)
@@ -15,7 +17,7 @@ export default function InputPasswordGenerete({
   return (
     <div className={styles.divFlexColumn}>
       <label htmlFor="InputPassword">
-        Sua nova senha com {passwordSize} caracteres:
+        Sua nova senha com {showInput ? passwordSize : 12} caracteres:
       </label>
       <div className={styles.divFlexRow}>
         <input
@@ -31,6 +33,8 @@ export default function InputPasswordGenerete({
         <RestartButton
           setPassword={setPassword}
           setPasswordSize={setPasswordSize}
+          showInput={showInput}
+          setShowInput={setShowInput}
         />
       </div>
     </div>

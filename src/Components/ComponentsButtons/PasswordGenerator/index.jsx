@@ -2,8 +2,14 @@
 import { useState } from "react"
 import styles from "../style.module.css"
 
-export default function PasswordGenerator({ setPassword, passwordSize }) {
+export default function PasswordGenerator({
+  setPassword,
+  passwordSize,
+  showInput,
+}) {
   const [passwordText, setPasswordText] = useState("Gerar senha")
+
+  passwordSize = showInput ? passwordSize : 12
 
   function generatePassword(ev) {
     ev.preventDefault()

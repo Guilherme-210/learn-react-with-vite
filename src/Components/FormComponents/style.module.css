@@ -1,9 +1,43 @@
 label {
   color: aliceblue;
 }
-
 div.InputSpan {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+/* estilo checkbox yipo swich */
+.LabelCheckbox {
+  margin-right: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.CheckboxSwich {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.CheckboxSwich::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.CheckboxSwich:checked {
+  background-color: #4caf50;
+}
+.CheckboxSwich:checked::before {
+  transform: translateX(20px);
 }
