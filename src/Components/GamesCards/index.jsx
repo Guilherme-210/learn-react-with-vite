@@ -1,15 +1,17 @@
 import styles from "./style.module.css"
 
-export default function GamesCards({ Games, index }) {
+export default function GamesCards({ Games }) {
   return (
     <>
-      <section className={styles.gameCard} key={index} id={Games.id}>
+      <section className={styles.gameCard} id={Games.id}>
         <div className={styles.gameContent}>
-          <img
-            src={Games.coverImage}
-            alt={`Capa de ${Games.title}`}
-            className={styles.gameCover}
-          />
+          <div className={styles.contentImg}>
+            <img
+              src={Games.coverImage}
+              alt={`Capa de ${Games.title}`}
+              className={styles.gameCover}
+            />
+          </div>
           <div className={styles.gameInfo}>
             <h2 className={styles.gameTitle}>{Games.title}</h2>
             <p>

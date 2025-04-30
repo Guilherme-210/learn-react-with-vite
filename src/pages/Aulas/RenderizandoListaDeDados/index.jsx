@@ -7,7 +7,9 @@ export default function RenderizandoLista() {
     <>
       <main className={styles.content}>
         {GamesDataBase.map((Games, index) => (
-          <GamesCards Games={Games} index={index} />
+          <div key={index}>
+            <GamesCards Games={Games} />
+          </div>
         ))}
       </main>
     </>

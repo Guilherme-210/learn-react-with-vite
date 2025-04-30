@@ -1,4 +1,6 @@
-
+.contentImg img {
+  height: 260px;
+}
 
 .gameCard {
   background: rgba(255, 255, 255, 0.08);
