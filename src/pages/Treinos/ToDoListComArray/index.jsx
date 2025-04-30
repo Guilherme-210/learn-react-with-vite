@@ -10,6 +10,12 @@ export default function ToDoListComArray() {
   const [dataDellTasks, setDataDellTasks] = useState([])
   const [dataDoneTasks, setDataDoneTasks] = useState([])
 
+  function setDataBases() {
+    setDataTasks([])
+    setDataDellTasks([])
+    setDataDoneTasks([])
+  }
+
   function addTask(taskText) {
     const newTask = {
       id: Date.now(),
@@ -52,6 +58,7 @@ export default function ToDoListComArray() {
             setSubmitButton={setSubmitButton}
             // ToDoList={ToDoList}
             styles={styles}
+            setDataBases={setDataBases}
           />
         </section>
         <section className={styles.sectionContent}>
