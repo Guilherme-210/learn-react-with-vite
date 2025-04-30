@@ -3,6 +3,7 @@ import Footer from "./Components/Footer/index.jsx"
 
 import DadosDinamicos from "./pages/Aulas/Dados-dinamicos-no-JSX/index.jsx"
 import ConhecendoHooks from "./pages/Aulas/Conhecendo-od-hooks/index.jsx"
+import RenderizandoLista from "./pages/Aulas/RenderizandoListaDeDados/index.jsx"
 import BibliotecaReact from "./pages/Exercicios/Exercicio-1/index.jsx"
 import CardsStarWars from "./pages/Exercicios/Exercicio-2/index.jsx"
 import PortifolioPage from "./pages/Exercicios/Exercicio-3/index.jsx"
@@ -29,8 +30,11 @@ export default function App() {
       {/* <Header currentPage="Conhecendo os Hooks" />
       <ConhecendoHooks /> */}
 
-      <Header currentPage="Conhecendo os Hooks" />
-      <GeradorDeSenha />
+      {/* <Header currentPage="Gerador de senhas" />
+      <GeradorDeSenha /> */}
+
+      <Header currentPage="Renderização de lista" />
+      <RenderizandoLista />
 
       {/* <Header currentPage="Formulário" />
       <FormPage /> */}

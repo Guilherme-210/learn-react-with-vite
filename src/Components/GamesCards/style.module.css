@@ -1,0 +1,60 @@
+
+
+.gameCard {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 2rem auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gameCard:hover {
+  transform: scale(1.02);
+}
+
+.gameContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .gameContent {
+    flex-direction: row;
+  }
+}
+
+.gameCover {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gameInfo {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.gameTitle {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.gameInfo p {
+  color: #ddd;
+  margin: 0.25rem 0;
+}
+
+.gameDescription {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #ccc;
+}
