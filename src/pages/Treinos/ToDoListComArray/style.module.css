@@ -1,0 +1,42 @@
+.sectionHeader {
+  background-color: #1c3cce;
+  width: 100%;
+  padding: 1rem;
+  align-items: start;
+  border-radius: 10px 10px 0 0;
+}
+
+.divFlexRow {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.divFlexColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.divContent {
+  width: 100%;
+  align-items: flex-start;
+}
+
+.sectionContent {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #70b6ef;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  align-items: start;
+}
+
+.ulList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  list-style: none;
+  align-items: flex-start;
+}

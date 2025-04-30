@@ -9,6 +9,7 @@ import CardsStarWars from "./pages/Exercicios/Exercicio-2/index.jsx"
 import PortifolioPage from "./pages/Exercicios/Exercicio-3/index.jsx"
 import GeradorDeSenha from "./pages/Exercicios/Exercicio-4/index.jsx"
 import FormPage from "./pages/Treinos/Fromulario/index.jsx"
+import ToDoListComArray from "./pages/Treinos/ToDoListComArray/index.jsx"
 
 export default function App() {
   return (
@@ -33,8 +34,11 @@ export default function App() {
       {/* <Header currentPage="Gerador de senhas" />
       <GeradorDeSenha /> */}
 
-      <Header currentPage="Renderização de lista" />
-      <RenderizandoLista />
+      {/* <Header currentPage="Renderização de lista" />
+      <RenderizandoLista /> */}
+
+      <Header currentPage="To-Do List Com Array" />
+      <ToDoListComArray />
 
       {/* <Header currentPage="Formulário" />
       <FormPage /> */}
