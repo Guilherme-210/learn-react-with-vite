@@ -1,4 +1,10 @@
-export default function ListToDo({ ToDoList, styles, Title }) {
+export default function ListToDo({
+  ToDoList,
+  styles,
+  Title,
+  dellTasks,
+  doneTasks,
+}) {
   return (
     <div className={styles.divFlexColumn}>
       <div className={styles.divContentList}>
@@ -10,14 +16,23 @@ export default function ListToDo({ ToDoList, styles, Title }) {
             return (
               <div key={index}>
                 <li className={`${styles.divFlexRow}`}>
-                  <label htmlFor={idInput}>
-                    {ToDo.id}: {ToDo.tesk}
+                  <label htmlFor={idInput} id={ToDo.id}>
+                    {ToDo.position}: {ToDo.task}
                   </label>
                   <span>
-                    <input id={idInput} type="checkbox" />
+                    <input
+                      id={idInput}
+                      type="checkbox"
+                      onClick={() => doneTasks(ToDo.id)}
+                    />
                   </span>
                   <span>
-                    <button id="deleteItem">Deletar</button>
+                    <button
+                      onClick={() => dellTasks(ToDo.id)}
+                      id={`deleteItem${ToDo.id}`}
+                    >
+                      Deletar
+                    </button>
                   </span>
                 </li>
               </div>

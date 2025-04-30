@@ -3,29 +3,29 @@ const id = 0
 let ToDoList = [
   {
     id: id,
-    tesk: "Fazer o corpo do ToDo",
+    task: "Fazer o corpo do ToDo",
   },
   {
     id: 1,
-    tesk: "Estilizar o corpo do ToDo",
+    task: "Estilizar o corpo do ToDo",
   },
   {
     id: 2,
-    tesk: "Finalizar o map do ToDo",
+    task: "Finalizar o map do ToDo",
   },
 ]
 
 let DellToDoList = [
   {
     id: id,
-    tesk: "Desistir do ToDo",
+    task: "Desistir do ToDo",
   },
 ]
 
 let DoneToDoList = [
   {
     id: id,
-    tesk: "Fazer o map do ToDo",
+    task: "Fazer o map do ToDo",
   },
 ]
 
