@@ -1,8 +1,8 @@
 import { useState } from "react"
 
 import styles from "./style.module.css"
-import ToDoInput from "./Components/ToDoInput/index.jsx"
-import ListToDo from "./Components/ListToDo/index.jsx"
+import ToDoInput from "./Components/ToDoInput"
+import ListToDo from "./Components/ListToDo"
 
 export default function ToDoListComArray() {
   const [submitButton, setSubmitButton] = useState("Submit")
@@ -21,20 +21,26 @@ export default function ToDoListComArray() {
       id: Date.now(),
       position: dataTasks.length + 1,
       task: taskText,
+      checked: false,
     }
 
     setDataTasks((ev) => [...ev, newTask])
+  }
+
+  function toggleCheckbox(id) {
+    setDataTasks((prev) =>
+      prev.map((task) =>
+        task.id === id ? { ...task, checked: !task.checked } : task
+      )
+    )
   }
 
   function dellTasks(id) {
     const taskToDelete = dataTasks.find((t) => t.id === id)
     if (!taskToDelete) return
 
-    // remove da lista original
     let updatedTasks = dataTasks.filter((t) => t.id !== id)
     setDataTasks(updatedTasks)
-
-    // adiciona na lista de deletados
     setDataDellTasks((ev) => [...ev, taskToDelete])
   }
 
@@ -49,42 +55,41 @@ export default function ToDoListComArray() {
   }
 
   return (
-    <>
-      <main>
-        <section className={`${styles.divFlexColumn} ${styles.sectionHeader}`}>
-          <ToDoInput
-            addTask={addTask}
-            submitButton={submitButton}
-            setSubmitButton={setSubmitButton}
-            // ToDoList={ToDoList}
-            styles={styles}
-            setDataBases={setDataBases}
-          />
-        </section>
-        <section className={styles.sectionContent}>
-          <ListToDo
-            Title={"A fazer"}
-            doneTasks={doneTasks}
-            dellTasks={dellTasks}
-            styles={styles}
-            ToDoList={dataTasks}
-          />
-          <ListToDo
-            Title={"Concluidos"}
-            doneTasks={doneTasks}
-            dellTasks={dellTasks}
-            styles={styles}
-            ToDoList={dataDoneTasks}
-          />
-          <ListToDo
-            Title={"Cancelados"}
-            doneTasks={doneTasks}
-            dellTasks={dellTasks}
-            styles={styles}
-            ToDoList={dataDellTasks}
-          />
-        </section>
-      </main>
-    </>
+    <main>
+      <section className={`${styles.divFlexColumn} ${styles.sectionHeader}`}>
+        <ToDoInput
+          addTask={addTask}
+          submitButton={submitButton}
+          setSubmitButton={setSubmitButton}
+          styles={styles}
+          setDataBases={setDataBases}
+        />
+      </section>
+
+      <section className={styles.sectionContent}>
+        <ListToDo
+          Title={"A fazer"}
+          doneTasks={doneTasks}
+          dellTasks={dellTasks}
+          toggleCheckbox={toggleCheckbox}
+          styles={styles}
+          ToDoList={dataTasks}
+        />
+        <ListToDo
+          Title={"Concluidos"}
+          doneTasks={doneTasks}
+          dellTasks={dellTasks}
+          styles={styles}
+          ToDoList={dataDoneTasks}
+        />
+        <ListToDo
+          Title={"Cancelados"}
+          doneTasks={doneTasks}
+          dellTasks={dellTasks}
+          styles={styles}
+          ToDoList={dataDellTasks}
+        />
+      </section>
+    </main>
   )
 }

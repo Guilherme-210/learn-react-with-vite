@@ -1,21 +1,28 @@
 import { useState } from "react"
 import styles from "../../style.module.css"
+import Button from "../../../../../Components/ComponentsButtons/Button"
 
-export default function ToDoInput({ submitButton, addTask, setDataBases }) {
+export default function ToDoInput({
+  submitButton,
+  addTask,
+  setDataBases,
+}) {
   const [newTask, setNewTask] = useState("")
 
   function handleSubmit() {
     if (newTask.trim() !== "") {
       addTask(newTask)
       setNewTask("")
+      console.log("Tarefa adicionada com sucesso!") // Feedback visual
+    } else {
+      console.log("Por favor, insira uma tarefa válida.") // Mensagem de erro
     }
   }
 
   return (
     <div className={styles.divFlexRow}>
-      <div className={styles.divContent}>
-        <div className={styles.divFlexRow.divContent}>
-          <label htmlFor="inputPush">Qual é a sua prôxima tarefa?</label>
+        <div className={styles.formWrapper}>
+          <label htmlFor="inputPush">Qual é a sua próxima tarefa?</label>
           <input
             type="text"
             id="inputPush"
@@ -27,18 +34,24 @@ export default function ToDoInput({ submitButton, addTask, setDataBases }) {
               }
             }}
           />
-          <button id="submit" onClick={handleSubmit}>
-            {submitButton}
-          </button>
-          <button id="reset" onClick={() => setNewTask("")}>
-            Resetar
-          </button>
-        </div>
+          <Button
+            ClassName="followButton"
+            id="submit"
+            onClick={handleSubmit}
+            Content={submitButton}
+          />
+          <Button
+            ClassName="followButton"
+            id="reset"
+            onClick={() => setNewTask("")}
+            Content="Resetar"
+          />
       </div>
-      <div>
+
+      <div className={styles.divContent}>
         <button
           className={styles.resetSistem}
-          id="resetSisten"
+          id="resetSystem"
           onClick={() => {
             setNewTask("")
             setDataBases()
