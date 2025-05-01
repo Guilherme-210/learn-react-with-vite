@@ -8,6 +8,7 @@ import BibliotecaReact from "./pages/Exercicios/Exercicio-1/index.jsx"
 import CardsStarWars from "./pages/Exercicios/Exercicio-2/index.jsx"
 import PortifolioPage from "./pages/Exercicios/Exercicio-3/index.jsx"
 import GeradorDeSenha from "./pages/Exercicios/Exercicio-4/index.jsx"
+import GameLibrary from "./pages/Exercicios/GameLibrary/index.jsx"
 import FormPage from "./pages/Treinos/Fromulario/index.jsx"
 import ToDoListComArray from "./pages/Treinos/ToDoListComArray/index.jsx"
 
@@ -37,8 +38,11 @@ export default function App() {
       {/* <Header currentPage="Renderização de lista" />
       <RenderizandoLista /> */}
 
-      <Header currentPage="To-Do List Com Array" />
-      <ToDoListComArray />
+      {/* <Header currentPage="To-Do List Com Array" />
+      <ToDoListComArray /> */}
+
+      <Header currentPage="Biblioteca de jogos" />
+      <GameLibrary />
 
       {/* <Header currentPage="Formulário" />
       <FormPage /> */}
