@@ -9,11 +9,7 @@ const themesList = [
   { name: "Esportes", color: "sports" },
 ]
 
-export default function CheckboxThemes({
-  selectedThemes,
-  setSelectedThemes,
-  placeholder,
-}) {
+export default function CheckboxThemes({ selectedThemes, setSelectedThemes }) {
   const toggleTheme = (theme) => {
     if (selectedThemes.includes(theme)) {
       setSelectedThemes(selectedThemes.filter((t) => t !== theme))
@@ -38,7 +34,6 @@ export default function CheckboxThemes({
               value={theme.name}
               checked={selectedThemes.includes(theme.name)}
               onChange={() => toggleTheme(theme.name)}
-              placeholder={placeholder}
             />
             {theme.name}
           </label>
