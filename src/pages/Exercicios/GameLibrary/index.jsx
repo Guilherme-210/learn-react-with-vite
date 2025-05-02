@@ -9,7 +9,7 @@ export default function GameLibrary() {
   const [textAlt, setTextAlt] = useState("")
   const [textarea, setTextarea] = useState("")
   const [themes, setThemes] = useState([])
-  const [gameLibrary] = useState([
+  const [gameLibrary, setGameLibrary] = useState([
     {
       id: 1746143914588,
       title: "Gog of War Ragnarok",
@@ -30,6 +30,10 @@ export default function GameLibrary() {
       themes: ["Ação", "Aventura", "Terror", "RPG", "Corrida", "Esportes"],
     },
   ])
+
+  const removeGame = (id) => {
+    setGameLibrary(state => state.filter(game => game.id !== id))
+  }
 
   const handleSubmit = (ev) => {
     ev.preventDefault()
@@ -73,8 +77,12 @@ export default function GameLibrary() {
           />
         </div>
         <div className={styles.contentCardsImages}>
-          {gameLibrary.map((game, index) => (
-            <CardGame key={index} Game={game} />
+          {gameLibrary.map((Game) => (
+            <CardGame
+              key={Game.id}
+              Game={Game}
+              onClick={() => removeGame(Game.id)}
+            />
           ))}
         </div>
       </div>

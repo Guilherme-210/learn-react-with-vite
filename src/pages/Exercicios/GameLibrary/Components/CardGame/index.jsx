@@ -1,6 +1,7 @@
+import ButtonLibrary from "../form/Button"
 import styles from "./style.module.css"
 
-export default function CardGame({ Game }) {
+export default function CardGame({ Game, onClick }) {
   const themeColorMap = {
     Ação: styles.action,
     Aventura: styles.adventure,
@@ -21,6 +22,8 @@ export default function CardGame({ Game }) {
           />
         </div>
         <div className={styles.divContent}>
+          <ButtonLibrary type="submit" content="Delerat" onClick={onClick} />
+
           <h3>{Game.title}</h3>
           <p>{Game.descripition}</p>
         </div>
