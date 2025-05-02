@@ -9,7 +9,11 @@ export default function GameLibrary() {
   const [textAlt, setTextAlt] = useState("")
   const [textarea, setTextarea] = useState("")
   const [themes, setThemes] = useState([])
-  const [gameLibrary, setGameLibrary] = useState([
+  const [gameLibrary, setGameLibrary] = useState(() => {
+    const storageGames = localStorage.getItem("obc-game-lib")
+    if (!storageGames) return []
+    return JSON.parse(storageGames)
+  }, [
     {
       id: 1746143914588,
       title: "Gog of War Ragnarok",
@@ -32,13 +36,17 @@ export default function GameLibrary() {
   ])
 
   const removeGame = (id) => {
-    setGameLibrary(state => state.filter(game => game.id !== id))
+    setGameLibrary((state) => {
+      const newState = state.filter((game) => game.id !== id)
+      localStorage.setItem("obc-game-lib", JSON.stringify(newState))
+      return newState
+    })
   }
 
   const handleSubmit = (ev) => {
     ev.preventDefault()
 
-    const Jogo = {
+    const Game = {
       id: Date.now(),
       title: title,
       urlCover: cover,
@@ -46,10 +54,15 @@ export default function GameLibrary() {
       descripition: textarea,
       themes: themes,
     }
-    console.log(Jogo)
+    console.log(Game)
 
-    gameLibrary.unshift(Jogo)
-    console.log(gameLibrary)
+    // gameLibrary.unshift(Game)
+    setGameLibrary((state) => {
+      const newState = [Game, ...state]
+      localStorage.setItem("obc-game-lib", JSON.stringify(newState))
+
+      return newState
+    })
 
     setTitle("")
     setCover("")
