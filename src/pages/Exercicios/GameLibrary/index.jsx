@@ -44,7 +44,7 @@ export default function GameLibrary() {
     }
     console.log(Jogo)
 
-    gameLibrary.push(Jogo)
+    gameLibrary.unshift(Jogo)
     console.log(gameLibrary)
 
     setTitle("")
