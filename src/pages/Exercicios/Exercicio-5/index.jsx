@@ -18,7 +18,10 @@ export default function FeedDeComentarios() {
 
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
+  const [tell, setTell] = useState("")
   const [comment, setComment] = useState("")
+  const [DDD, setDDD] = useState("")
+  const [tellVal, setTellVal] = useState("")
 
   const deleteComment = (id) => {
     console.log("Deletando comentário!")
@@ -42,6 +45,7 @@ export default function FeedDeComentarios() {
       id: Date.now(),
       name: name,
       email: email,
+      tell: tell,
       comment: comment,
     }
     console.log(Comment)
@@ -56,6 +60,8 @@ export default function FeedDeComentarios() {
     setName("")
     setEmail("")
     setComment("")
+    setDDD("")
+    setTellVal("")
   }
 
   return (
@@ -73,6 +79,11 @@ export default function FeedDeComentarios() {
           comment={comment}
           setComment={setComment}
           handleSubmit={handleSubmit}
+          DDD={DDD}
+          setDDD={setDDD}
+          tellVal={tellVal}
+          setTellVal={setTellVal}
+          setTell={setTell}
         />
 
         <CommentsList

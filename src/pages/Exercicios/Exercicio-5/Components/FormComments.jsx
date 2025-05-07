@@ -8,7 +8,14 @@ export default function FormComments({
   comment,
   setComment,
   handleSubmit,
+  DDD,
+  setDDD,
+  tellVal,
+  setTellVal,
+  setTell,
 }) {
+  setTell(`+55 ${DDD} ${tellVal}`)
+
   return (
     <div className={styles.divForm}>
       <h2>Comentários</h2>
@@ -29,8 +36,6 @@ export default function FormComments({
           />
         </div>
 
-        <br />
-
         <div className={styles.divInput}>
           <label htmlFor="email">Email:</label>
           <input
@@ -47,7 +52,45 @@ export default function FormComments({
           />
         </div>
 
-        <br />
+        <div className={styles.divDDDTell}>
+          <div className={styles.divDDD}>
+            <label htmlFor="DDD">DDD:</label>
+            <input
+              type="number"
+              id="DDD"
+              name="DDD"
+              placeholder="12"
+              minLength="2"
+              maxLength="2"
+              pattern="[0-9]{2}"
+              title="O DDD deve conter 2 dígitos numéricos."
+              value={DDD}
+              onChange={(ev) => {
+                setDDD(ev.target.value)
+              }}
+              required
+            />
+          </div>
+
+          <div className={styles.divTell}>
+            <label htmlFor="tellVal">Telefone:</label>
+            <input
+              type="number"
+              id="tellVal"
+              name="tellVal"
+              placeholder="Telefone do usuário..."
+              minLength="3"
+              value={tellVal}
+              maxLength="9"
+              pattern="[0-9]{9}"
+              title="O telefone deve conter 9 dígitos numéricos."
+              onChange={(ev) => {
+                setTellVal(ev.target.value)
+              }}
+              required
+            />
+          </div>
+        </div>
 
         <div className={styles.divTextarea}>
           <label htmlFor="comment">Comentário:</label>
