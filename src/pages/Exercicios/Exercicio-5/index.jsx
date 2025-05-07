@@ -1,4 +1,8 @@
 import { useState } from "react"
+import CommentsList from "./Components/CommentsList.jsx"
+import FormComments from "./Components/FormComments.jsx"
+import ContentExplanation from "./Components/ContentExplanation.jsx"
+
 import styles from "./style.module.css"
 
 export default function FeedDeComentarios() {
@@ -17,7 +21,7 @@ export default function FeedDeComentarios() {
   const [comment, setComment] = useState("")
 
   const deleteComment = (id) => {
-    console.log("Deletndo comentario!")
+    console.log("Deletando comentário!")
     try {
       setComments((state) => {
         const newState = state.filter((comment) => comment.id !== id)
@@ -38,7 +42,7 @@ export default function FeedDeComentarios() {
       id: Date.now(),
       name: name,
       email: email,
-      Comment: comment,
+      comment: comment,
     }
     console.log(Comment)
 
@@ -57,107 +61,25 @@ export default function FeedDeComentarios() {
   return (
     <main className={styles.content}>
       <div className={styles.contentExplanation}>
-        <h1>Feed de Comentários</h1>
-        <p>Essa página é um exercício de renderização de lista.</p>
-        <p>O objetivo é criar uma lista de comentários.</p>
-        <p>
-          Os comentários devem ser renderizados a partir de um array de objetos.
-        </p>
-        <p>Cada objeto deve conter as seguintes propriedades:</p>
-        <ul>
-          <li>nome</li>
-          <li>Email</li>
-          <li>comentario</li>
-        </ul>
+        <ContentExplanation />
       </div>
 
       <div className={styles.contentForm}>
-        <div className={styles.divForm}>
-          <h2>Comentários</h2>
-          <form onSubmit={handleSubmit} className={styles.form}>
-            <div className={styles.divInput}>
-              <label htmlFor="name">Nome:</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Nome do usuário..."
-                minLength="3"
-                value={name}
-                onChange={(ev) => {
-                  setName(ev.target.value)
-                }}
-                required
-              />
-            </div>
+        <FormComments
+          name={name}
+          setName={setName}
+          email={email}
+          setEmail={setEmail}
+          comment={comment}
+          setComment={setComment}
+          handleSubmit={handleSubmit}
+        />
 
-            <br />
-
-            <div className={styles.divInput}>
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="E-mail do usuário..."
-                minLength="3"
-                value={email}
-                onChange={(ev) => {
-                  setEmail(ev.target.value)
-                }}
-                required
-              />
-            </div>
-
-            <br />
-
-            <div className={styles.divTextarea}>
-              <label htmlFor="comment">Comentário:</label>
-              <textarea
-                id="comment"
-                name="comment"
-                placeholder="Comentario do usuário..."
-                minLength="3"
-                value={comment}
-                onChange={(ev) => {
-                  setComment(ev.target.value)
-                }}
-                required
-              ></textarea>
-            </div>
-            <br />
-            <button type="submit">
-              Enviar
-            </button>
-          </form>
-        </div>
-
-        <div className={styles.divComments}>
-          <h2>Lista de Comentários</h2>
-          <div className={styles.divList}>
-            {comments.length === 0 ? (
-              <div>
-                <p>Nenhum comentário encontrado.</p>
-                <p>Seja o primeiro a comentar!</p>
-              </div>
-            ) : (
-              comments.map((comment) => (
-                <div
-                  key={comment.id}
-                  id={comment.id}
-                  className={styles.comment}
-                >
-                  <h2>{comment.name}</h2>
-                  <a href={`mailto:${comment.email}`}>{comment.email}</a>
-                  <p>{comment.Comment}</p>
-                  <button onClick={() => deleteComment(comment.id)}>
-                    Apagar comentário
-                  </button>
-                </div>
-              ))
-            )}
-          </div>
-        </div>
+        <CommentsList
+          comments={comments}
+          setComments={setComments}
+          deleteComment={deleteComment}
+        />
       </div>
     </main>
   )
