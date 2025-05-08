@@ -8,19 +8,6 @@
   height: 100vh;
 }
 
-main {
-  transition-property: background-color, font-size, transform, color;
-  transition: 1s ease-in-out;
-
-  display: flex;
-  max-width: 100%;
-  padding: 2rem 5rem;
-
-  flex-direction: column;
-  place-items: center;
-  text-align: center;
-}
-
 /* estilização do fieldset */
 fieldset {
   transition-property: background-color, font-size, transform, color;

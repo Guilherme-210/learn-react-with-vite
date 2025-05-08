@@ -1,4 +1,4 @@
-import "./style.css"
+import styles from "./style.module.css"
 import Button from "../../../Components/ComponentsButtons/ButtonLink/index.jsx"
 
 export default function BibliotecaReact() {
@@ -11,7 +11,7 @@ export default function BibliotecaReact() {
 
   return (
     <>
-      <main>
+      <main className={styles.Main}>
         <section>
           <img src="/public/react.png" alt="Imagem do o logo react" />
           <h2>{valTitle[0]}</h2>

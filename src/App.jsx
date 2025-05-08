@@ -1,24 +1,23 @@
 import Header from "./Components/Header/index.jsx"
 import Footer from "./Components/Footer/index.jsx"
 
-import DadosDinamicos from "./pages/Aulas/Dados-dinamicos-no-JSX/index.jsx"
-import ConhecendoHooks from "./pages/Aulas/Conhecendo-od-hooks/index.jsx"
-import RenderizandoLista from "./pages/Aulas/RenderizandoListaDeDados/index.jsx"
-import UsingUseRef from "./pages/Aulas/UsingUseRef/index.jsx"
-import BibliotecaReact from "./pages/Exercicios/Exercicio-1/index.jsx"
-import CardsStarWars from "./pages/Exercicios/Exercicio-2/index.jsx"
-import PortifolioPage from "./pages/Exercicios/Exercicio-3/index.jsx"
-import GeradorDeSenha from "./pages/Exercicios/Exercicio-4/index.jsx"
-import FeedDeComentarios from "./pages/Exercicios/Exercicio-5/index.jsx"
-import GameLibrary from "./pages/Exercicios/GameLibrary/index.jsx"
-import FormPage from "./pages/Treinos/Fromulario/index.jsx"
-import ToDoListComArray from "./pages/Treinos/ToDoListComArray/index.jsx"
+// import DadosDinamicos from "./pages/Aulas/Dados-dinamicos-no-JSX/index.jsx"
+// import ConhecendoHooks from "./pages/Aulas/Conhecendo-od-hooks/index.jsx"
+// import RenderizandoLista from "./pages/Aulas/RenderizandoListaDeDados/index.jsx"
+// import UsingUseRef from "./pages/Aulas/UsingUseRef/index.jsx"
+import UsingUseEffect from "./pages/Aulas/UsingUseEffect/index.jsx"
+// import BibliotecaReact from "./pages/Exercicios/Exercicio-1/index.jsx"
+// import CardsStarWars from "./pages/Exercicios/Exercicio-2/index.jsx"
+// import PortifolioPage from "./pages/Exercicios/Exercicio-3/index.jsx"
+// import GeradorDeSenha from "./pages/Exercicios/Exercicio-4/index.jsx"
+// import FeedDeComentarios from "./pages/Exercicios/Exercicio-5/index.jsx"
+// import GameLibrary from "./pages/Exercicios/GameLibrary/index.jsx"
+// import FormPage from "./pages/Treinos/Fromulario/index.jsx"
+// import ToDoListComArray from "./pages/Treinos/ToDoListComArray/index.jsx"
 
 export default function App() {
   return (
     <>
-      {/* <Header /> */}
-
       {/* <Header currentPage="Dados Dinâmicos" />
       <DadosDinamicos /> */}
 
@@ -49,8 +48,11 @@ export default function App() {
       {/* <Header currentPage="Feed de comentários" />
       <FeedDeComentarios /> */}
 
-      <Header currentPage="Usando useRef" />
-      <UsingUseRef />
+      {/* <Header currentPage="Usando useRef" />
+      <UsingUseRef /> */}
+
+      <Header currentPage="Usando useEffect" />
+      <UsingUseEffect />
 
       {/* <Header currentPage="Formulário" />
       <FormPage /> */}

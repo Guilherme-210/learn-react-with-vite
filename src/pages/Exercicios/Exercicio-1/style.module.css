@@ -1,4 +1,4 @@
-main {
+.main {
   padding: 2rem 5rem;
   display: flex;
   flex-direction: column;
@@ -7,25 +7,25 @@ main {
   text-align: center;
 }
 
-h2 {
+.main h2 {
   color: #fff;
 }
 
-p {
+.main p {
   color: #fff;
 }
 
-.DivButtons {
+.main .DivButtons {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
 
-hr {
+.main hr {
   width: 100%;
 }
 
-ul {
+.main ul {
   color: #fff;
   display: flex;
   flex-direction: column;
