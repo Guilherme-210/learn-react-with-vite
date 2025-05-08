@@ -5,7 +5,8 @@ import Footer from "./Components/Footer/index.jsx"
 // import ConhecendoHooks from "./pages/Aulas/Conhecendo-od-hooks/index.jsx"
 // import RenderizandoLista from "./pages/Aulas/RenderizandoListaDeDados/index.jsx"
 // import UsingUseRef from "./pages/Aulas/UsingUseRef/index.jsx"
-import UsingUseEffect from "./pages/Aulas/UsingUseEffect/index.jsx"
+// import UsingUseEffect from "./pages/Aulas/UsingUseEffect/index.jsx"
+import HttpWithUseEffect from "./pages/Aulas/HttpWithUseEffect/index.jsx"
 // import BibliotecaReact from "./pages/Exercicios/Exercicio-1/index.jsx"
 // import CardsStarWars from "./pages/Exercicios/Exercicio-2/index.jsx"
 // import PortifolioPage from "./pages/Exercicios/Exercicio-3/index.jsx"
@@ -51,8 +52,11 @@ export default function App() {
       {/* <Header currentPage="Usando useRef" />
       <UsingUseRef /> */}
 
-      <Header currentPage="Usando useEffect" />
-      <UsingUseEffect />
+      {/* <Header currentPage="Usando useEffect" />
+      <UsingUseEffect /> */}
+
+      <Header currentPage="HTTP com useEffect" />
+      <HttpWithUseEffect />
 
       {/* <Header currentPage="Formulário" />
       <FormPage /> */}
