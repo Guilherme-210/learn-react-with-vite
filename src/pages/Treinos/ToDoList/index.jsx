@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import styles from "./ToDoList.module.css"
 
 export default function ToDoList() {
@@ -12,6 +12,11 @@ export default function ToDoList() {
   const [inputStyle, setInputStyle] = useState(styles.input)
   const [descriptionStyle, setDescriptionStyle] = useState(styles.input)
   const [showDescription, setShowDescription] = useState(false)
+
+  useEffect(() => { 
+    alert(`Tarefas carregadas: ${tasks.length}`)
+   }, [tasks])
+
 
   function handleSubmit(ev) {
     ev.preventDefault()

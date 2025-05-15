@@ -1,18 +1,29 @@
 import { useEffect, useState } from "react"
 import styles from "./styles.module.css"
 
+async function FetchPokemon() {
+  const response = await fetch("https://pokeapi.co/api/v2/pokemon")
+  const data = await response.json()
+  return data.results
+}
+
 export default function HttpWithUseEffect() {
   const [pokemons, setPokemons] = useState([])
   const [pokemonShown, setPokemonShown] = useState(null)
 
-  if (pokemons.length === 0) {
-    FetchPokemon().then((data) => {
-      console.log("requisição realizada")
-      console.log(data)
-      setPokemons(data)
-    })
-  }
+  // Nenhum codigo que altere o state deve ser colocado na raiz do componente, pos se nao ele entrata em loop de renderização
+  // =================================================================
+  // FetchPokemon().then((data) => {
+  //   console.log("requisição realizada")
+  //   console.log(data)
+  //   setPokemons(data)
+  // })
 
+  // Pra fazer a requisição HTTP, o ideal é usar o useEffect, que é um hook do React que permite executar efeitos colaterais em componentes funcionais.
+  // O useEffect é chamado após a renderização do componente, e pode ser usado para fazer requisições HTTP, manipular o DOM, entre outras coisas.
+  // O useEffect recebe dois parâmetros: uma função que contém o código a ser executado, e um array de dependências. O array de dependências é usado para controlar quando o efeito deve ser executado.
+  // Se o array de dependências estiver vazio, o efeito será executado apenas uma vez, após a primeira renderização do componente. Se o array de dependências contiver variáveis, o efeito será executado sempre que essas variáveis mudarem.
+  // ============ Metodo usado na aula ===============
   useEffect(() => {
     //   FetchPokemon().then((data) => {
     //     console.log("requisição realizada")
@@ -20,6 +31,30 @@ export default function HttpWithUseEffect() {
     //     setPokemons(data)
     // })
   }, [])
+
+  // =========== Metodo usado useEffect ==============
+  // const [shownDetails, setShownDetails] = useState(null)
+  // useEffect(() => {
+  //   if (url) {
+  //     fetch(url)
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         console.log("Pokémon encontrado!")
+  //         console.log(data)
+  //         setPokemonShown(data)
+  //       })
+  //   }
+  // }, [shownDetails])
+
+  // Outra forma de fazer a requisição HTTP é usando o if removendo o useEffect e complexidade desnecessaria da aplicação
+  // ============ Metodo simplificado ==============
+  if (pokemons.length === 0) {
+    FetchPokemon().then((data) => {
+      console.log("requisição realizada")
+      console.log(data)
+      setPokemons(data)
+    })
+  }
 
   const shownDetails = async (url) => {
     const data = await fetch(url).then((res) => res.json())
@@ -59,11 +94,13 @@ export default function HttpWithUseEffect() {
         <div className={styles.pokemonList}>
           {pokemons.map((pokemon) => (
             <div
+              // onClick={() => setShownDetails(pokemon.url)}
               onClick={() => shownDetails(pokemon.url)}
               key={pokemon.url}
               className={styles.pokemonCard}
             >
               <h3>{pokemon.name}</h3>
+              {/* <button onClick={() => setShownDetails(pokemon.url)}> */}
               <button onClick={() => shownDetails(pokemon.url)}>
                 ver detalhes
               </button>
@@ -117,10 +154,4 @@ export default function HttpWithUseEffect() {
       </div>
     </main>
   )
-}
-
-async function FetchPokemon() {
-  const response = await fetch("https://pokeapi.co/api/v2/pokemon")
-  const data = await response.json()
-  return data.results
 }
